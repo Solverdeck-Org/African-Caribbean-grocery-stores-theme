@@ -8,3 +8,4 @@
 ehthumbs.db
 Thumbs.db
 .shopify
+-e "\n# Ignore raw design files\ndesign/" 
