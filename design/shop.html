@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Market | The Modern Hearth</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#973d00",
+                        "secondary-fixed-dim": "#ffba27",
+                        "secondary-container": "#ffb702",
+                        "on-background": "#28180d",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#f2d4c2",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#fff1ea",
+                        "on-primary-container": "#dcffeb",
+                        "inverse-on-surface": "#ffede4",
+                        "surface-variant": "#fbddca",
+                        "surface-bright": "#fff8f5",
+                        "outline-variant": "#dfc0b7",
+                        "on-tertiary-fixed-variant": "#7a3000",
+                        "surface-container": "#ffeade",
+                        "secondary": "#7d5800",
+                        "on-primary-fixed": "#002114",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#5e4100",
+                        "on-secondary-container": "#6b4b00",
+                        "inverse-surface": "#3f2c20",
+                        "surface-container-highest": "#fbddca",
+                        "surface-container-high": "#ffe3d2",
+                        "secondary-fixed": "#ffdea9",
+                        "tertiary-container": "#be4f00",
+                        "tertiary-fixed": "#ffdbcc",
+                        "on-tertiary-fixed": "#351000",
+                        "tertiary-fixed-dim": "#ffb693",
+                        "surface-tint": "#3f6653",
+                        "inverse-primary": "#a5d0b9",
+                        "on-surface-variant": "#58423b",
+                        "primary-fixed": "#c1ecd4",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "primary-container": "#517966",
+                        "on-secondary-fixed": "#271900",
+                        "background": "#fff8f5",
+                        "on-primary-fixed-variant": "#274e3d",
+                        "outline": "#8b716a",
+                        "on-error-container": "#93000a",
+                        "primary": "#39614e",
+                        "on-surface": "#28180d",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#fff5f2",
+                        "surface": "#fff8f5",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#a5d0b9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "xxl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Epilogue"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .heritage-pattern {
+            background-image: radial-gradient(#dfc0b7 0.5px, transparent 0.5px);
+            background-size: 16px 16px;
+            opacity: 0.15;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 bg-[#fff8f5] dark:bg-[#1a1411] backdrop-blur-xl bg-opacity-90">
+<nav class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-12">
+<a class="text-2xl font-bold font-epilogue text-[#28180d] dark:text-[#fff1ea] tracking-tight" href="#">The Modern Hearth</a>
+<div class="hidden md:flex gap-8">
+<a class="text-[#39614e] dark:text-[#517966] border-b-2 border-[#39614e] font-bold pb-1 transition-colors duration-300" href="#">Market</a>
+<a class="text-[#28180d]/70 dark:text-[#fff1ea]/70 font-medium hover:text-[#39614e] transition-colors duration-300" href="#">Heritage</a>
+<a class="text-[#28180d]/70 dark:text-[#fff1ea]/70 font-medium hover:text-[#39614e] transition-colors duration-300" href="#">About</a>
+<a class="text-[#28180d]/70 dark:text-[#fff1ea]/70 font-medium hover:text-[#39614e] transition-colors duration-300" href="#">FAQ</a>
+<a class="text-[#28180d]/70 dark:text-[#fff1ea]/70 font-medium hover:text-[#39614e] transition-colors duration-300" href="#">Contact</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative hidden lg:block">
+<input class="bg-surface-container-low border-none rounded-full py-2 pl-10 pr-4 w-64 focus:ring-2 focus:ring-primary text-sm font-body" placeholder="Search heritage grains..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-2 text-on-surface-variant text-xl">search</span>
+</div>
+<div class="flex gap-4">
+<button class="scale-95 active:opacity-80 transition-all text-[#39614e]"><span class="material-symbols-outlined">location_on</span></button>
+<button class="scale-95 active:opacity-80 transition-all text-[#39614e]"><span class="material-symbols-outlined">payments</span></button>
+<button class="scale-95 active:opacity-80 transition-all text-[#39614e] relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-tertiary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">3</span>
+</button>
+</div>
+</div>
+</nav>
+<div class="bg-[#fff1ea] dark:bg-[#28180d] h-[1px] w-full"></div>
+</header>
+<main class="max-w-screen-2xl mx-auto px-8 py-12 flex gap-12 relative">
+<!-- Heritage Background Decoration -->
+<div class="absolute inset-0 heritage-pattern pointer-events-none"></div>
+<!-- Sidebar Filter -->
+<aside class="w-72 flex-shrink-0 relative z-10 space-y-10">
+<div>
+<h3 class="font-headline font-bold text-xl mb-6 text-on-background flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">filter_list</span>
+                    Refine Selection
+                </h3>
+<!-- Region -->
+<div class="mb-8">
+<p class="font-bold text-sm uppercase tracking-widest text-on-surface-variant mb-4">Origins</p>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary bg-surface-container" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">West Africa</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary bg-surface-container" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">The Caribbean</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary bg-surface-container" type="checkbox"/>
+<span class="group-hover:text-primary transition-colors">East Africa</span>
+</label>
+</div>
+</div>
+<!-- Category -->
+<div class="mb-8">
+<p class="font-bold text-sm uppercase tracking-widest text-on-surface-variant mb-4">Categories</p>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-5 h-5 border-outline-variant text-primary focus:ring-primary bg-surface-container" name="cat" type="radio"/>
+<span class="group-hover:text-primary transition-colors">All Pantry</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 border-outline-variant text-primary focus:ring-primary bg-surface-container" name="cat" type="radio"/>
+<span class="group-hover:text-primary transition-colors">Grains &amp; Flours</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 border-outline-variant text-primary focus:ring-primary bg-surface-container" name="cat" type="radio"/>
+<span class="group-hover:text-primary transition-colors">Spices &amp; Rubs</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 border-outline-variant text-primary focus:ring-primary bg-surface-container" name="cat" type="radio"/>
+<span class="group-hover:text-primary transition-colors">Roots &amp; Produce</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 border-outline-variant text-primary focus:ring-primary bg-surface-container" name="cat" type="radio"/>
+<span class="group-hover:text-primary transition-colors">Beverages</span>
+</label>
+</div>
+</div>
+<!-- Price Range -->
+<div>
+<p class="font-bold text-sm uppercase tracking-widest text-on-surface-variant mb-4">Price Range</p>
+<input class="w-full accent-primary mb-2" type="range"/>
+<div class="flex justify-between text-sm font-medium text-on-surface-variant">
+<span>$0</span>
+<span>$100+</span>
+</div>
+</div>
+</div>
+<!-- Heritage Badge Spotlight -->
+<div class="bg-surface-container-high p-6 rounded-xxl relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 opacity-5 group-hover:rotate-12 transition-transform duration-700">
+<span class="material-symbols-outlined text-8xl">eco</span>
+</div>
+<h4 class="font-headline font-bold text-lg mb-2 relative z-10">Artisan Harvest</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed relative z-10 mb-4">Supporting regenerative farming across the Diaspora.</p>
+<a class="text-tertiary font-bold text-xs underline decoration-2 underline-offset-4 flex items-center gap-1 group/link" href="#">
+                    Learn about origins
+                    <span class="material-symbols-outlined text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</aside>
+<!-- Product Grid Content -->
+<section class="flex-1 relative z-10">
+<header class="flex justify-between items-end mb-10">
+<div>
+<h1 class="font-headline font-black text-5xl tracking-tight mb-2">The Market Shelf</h1>
+<p class="text-on-surface-variant font-medium">Curating 124 authentic ingredients from over 15 nations.</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-sm font-bold text-on-surface-variant">Sort by:</span>
+<button class="bg-surface-container px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-2 border border-outline-variant/10">
+                        Featured Selection
+                        <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+</div>
+</header>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-10">
+<!-- Product Card 1 -->
+<article class="group">
+<div class="relative aspect-[4/5] rounded-xxl overflow-hidden bg-surface-container-low mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close up of organic golden brown fonio grains in a handcrafted wooden bowl with warm kitchen lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP9V2pEvu77Yh_FffZldRlfcoQAjeg8heC9JwPa5H201CnhwCO1n4zCi3e0hHHP3-UUAe5TjRekTGj-MgpcfSUoM5-arp6vfJ1CDaeyW3HSHfRkQ7qEZfgGoiPDZWCRxBIAR6giCSJl5JfaSXl9Qm4DHWtlWcDUn-kHZIqIJFEyu9pNSJZeqK5Ri26bF0I2aVL2UFzBMfry8I27CYL6jH4ymUFtX1rouDk3yA_jvwpI6_WjwKyv7Vt9VJbdU5OMEUv-UenRPltr_MY"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-primary text-white text-[10px] font-black uppercase tracking-tighter px-2 py-1 rounded">Heritage</span>
+</div>
+<button class="absolute bottom-4 right-4 bg-white/90 backdrop-blur p-3 rounded-full shadow-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+<span class="material-symbols-outlined text-primary">favorite</span>
+</button>
+</div>
+<div class="px-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-on-background group-hover:text-primary transition-colors">Premium Ancient Fonio</h3>
+<span class="font-headline font-bold text-tertiary">$12.50</span>
+</div>
+<p class="text-xs text-on-surface-variant mb-4">Grown in the Sahel, Senegal</p>
+<button class="w-full bg-primary text-on-primary py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-colors shadow-sm active:scale-95">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+                            Add to Cart
+                        </button>
+</div>
+</article>
+<!-- Product Card 2 -->
+<article class="group">
+<div class="relative aspect-[4/5] rounded-xxl overflow-hidden bg-surface-container-low mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Vibrant red scotch bonnet peppers on a rustic linen cloth, sharp focus, natural sun-drenched lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkCwEXmlFJY1WiG1y6WO_Wy9p25agBrbXAgAmfa242DaoM65d1Bhk7NXAFGMdBbKKQ9FdgrYkKX3jmDZ47HyHij9bWbwUx6FfkPKS8oZdYd1KUmZm6f25D2Yu754wTb0l6wv3uSbGeMKcZGSjqiJZFEk3Se0QIBBET_R9-1iNus2Q0VdaldJNYCq7bgQGJLBQ-mxX25yywiGtSIhTXHO_WQL42e3lNLopaxHJwvcoJ58tKHMQs64alyMJ1v-S6hvyWrD9_qLKB3dW5"/>
+<div class="absolute top-4 left-4">
+<span class="bg-tertiary text-white text-[10px] font-black uppercase tracking-tighter px-2 py-1 rounded">Hot</span>
+</div>
+<button class="absolute bottom-4 right-4 bg-white/90 backdrop-blur p-3 rounded-full shadow-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+<span class="material-symbols-outlined text-primary">favorite</span>
+</button>
+</div>
+<div class="px-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-on-background group-hover:text-primary transition-colors">Jamaican Scotch Bonnet</h3>
+<span class="font-headline font-bold text-tertiary">$4.99</span>
+</div>
+<p class="text-xs text-on-surface-variant mb-4">St. Mary Parish, Jamaica</p>
+<button class="w-full bg-primary text-on-primary py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-colors shadow-sm active:scale-95">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+                            Add to Cart
+                        </button>
+</div>
+</article>
+<!-- Product Card 3 -->
+<article class="group">
+<div class="relative aspect-[4/5] rounded-xxl overflow-hidden bg-surface-container-low mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Organic whole allspice berries in a clay bowl with professional editorial lighting, earth tones and textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD79Xo3ygcAACEPYy3XzkS6XGc-PEXkCUC0E-Eh1Wf1y7pA50BCC1vqChuyXr6S3N_6ffHsxnlKAaS2n4B--jPQYYNiMW3aQbswLuPhKKMugQkepbI_HYI24W6Mu3C1llzS6iaPB57yqnqrBrtgt25_Xywy-VuXugA2ZLAUFyiLw_wB2mCk7pWvif6bkTC46CDM6Rc7uB1dYRP1i-cyH_mgAKrMWTgxQtAExjppGUV_0rUEedfXoeeUpKYup6s-YbJthLX6Ptw-bXzk"/>
+<button class="absolute bottom-4 right-4 bg-white/90 backdrop-blur p-3 rounded-full shadow-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+<span class="material-symbols-outlined text-primary">favorite</span>
+</button>
+</div>
+<div class="px-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-on-background group-hover:text-primary transition-colors">Whole Pimento Berries</h3>
+<span class="font-headline font-bold text-tertiary">$8.00</span>
+</div>
+<p class="text-xs text-on-surface-variant mb-4">Sun-dried Caribbean Spice</p>
+<button class="w-full bg-primary text-on-primary py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-colors shadow-sm active:scale-95">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+                            Add to Cart
+                        </button>
+</div>
+</article>
+<!-- Product Card 4 -->
+<article class="group">
+<div class="relative aspect-[4/5] rounded-xxl overflow-hidden bg-surface-container-low mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Artisanal red palm oil in a clear glass bottle with light refracting through the rich orange liquid" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0DknF76f1mnvIJkyPm12XJ5LELd7muqShue3FtM_Gsb6qjNtNNBuAEqBJNyPYdCcp7SB_hTZGYVMO7N5snCS7BYlBc3kAXdWIm_n6depzu_1Hb1oiiavWw6Dzfhy8GKg3xbnmTDXur58H6e50VRYjbI4d2yn4EvTCKt2RUVmiWPvch-CbZtzWVsGKbM7U_4RRHKVwOSuA4wGK3q2VNZzEAGiOWJzE7SodkZ2TYYmliegMqkR5RkDwZtBFrnyTx-2oc-xmAYiBy9Bx"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-black uppercase tracking-tighter px-2 py-1 rounded">Pure</span>
+</div>
+<button class="absolute bottom-4 right-4 bg-white/90 backdrop-blur p-3 rounded-full shadow-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+<span class="material-symbols-outlined text-primary">favorite</span>
+</button>
+</div>
+<div class="px-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-on-background group-hover:text-primary transition-colors">Zomi Palm Oil</h3>
+<span class="font-headline font-bold text-tertiary">$18.25</span>
+</div>
+<p class="text-xs text-on-surface-variant mb-4">Traditional Accra Pressing</p>
+<button class="w-full bg-primary text-on-primary py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-colors shadow-sm active:scale-95">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+                            Add to Cart
+                        </button>
+</div>
+</article>
+<!-- Product Card 5 -->
+<article class="group">
+<div class="relative aspect-[4/5] rounded-xxl overflow-hidden bg-surface-container-low mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Large organic plantains with slight green tint on a weathered wood background, high detail texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqDI1S8mv25i1cCa4ZZleX0ClG6IJWBPUdm9fbOmDdY1IR-oz4IL3pugstii9UH4su_lKUlvU0ciaLvXy6oA0MudR8OL0PpF_SyZCFKJfjq3sKN0ssaIZcHdlLiYUFX5hDyj82wX37At-EzfHu-tkgiFnw__e060bfTiOvqopYGgX84Wv_84zXu1CqmorR40ELVMn_hVQYEKqSX_BP1Wt3XPdCL_QxVa3XuMsjSsJcTBpDBoqJyswi4K5PuM3Yn_9YSZxVOZhpsVS_"/>
+<button class="absolute bottom-4 right-4 bg-white/90 backdrop-blur p-3 rounded-full shadow-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+<span class="material-symbols-outlined text-primary">favorite</span>
+</button>
+</div>
+<div class="px-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-on-background group-hover:text-primary transition-colors">Green Cooking Plantains</h3>
+<span class="font-headline font-bold text-tertiary">$2.50</span>
+</div>
+<p class="text-xs text-on-surface-variant mb-4">Per lb - Freshly Imported</p>
+<button class="w-full bg-primary text-on-primary py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-colors shadow-sm active:scale-95">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+                            Add to Cart
+                        </button>
+</div>
+</article>
+<!-- Product Card 6 -->
+<article class="group">
+<div class="relative aspect-[4/5] rounded-xxl overflow-hidden bg-surface-container-low mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A heap of dried hibiscus petals (sorrel) with deep magenta tones, captured in soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWr5kUWf9j_h72LqjSi2PXaug0bkntgU0nXjOCcBO8gurKi7MECNGIvKWonnzq5bYphjkJn5zh0OPteGhl0JXZeZ00zqKU6uHrWDnenN4kpAPYMIQIlvVnfBuXj3eW9mQfgJeMWbNz7GVwDE08d5u9WazBIyZCsgYcFG2T_mNomRZek7sjEKWe6H7qICpL2gZl1fCR_jxhRCS0GORYO_-q33_oEloCoH2M6qlHaJTjGn6o-clYVUbyRGMnCYTnkFMeU1vTEZpfwAIa"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary text-white text-[10px] font-black uppercase tracking-tighter px-2 py-1 rounded">Heritage</span>
+</div>
+<button class="absolute bottom-4 right-4 bg-white/90 backdrop-blur p-3 rounded-full shadow-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+<span class="material-symbols-outlined text-primary">favorite</span>
+</button>
+</div>
+<div class="px-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-on-background group-hover:text-primary transition-colors">Dried Sorrel Petals</h3>
+<span class="font-headline font-bold text-tertiary">$9.00</span>
+</div>
+<p class="text-xs text-on-surface-variant mb-4">Hand-picked Hibiscus Sabdariffa</p>
+<button class="w-full bg-primary text-on-primary py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-colors shadow-sm active:scale-95">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+                            Add to Cart
+                        </button>
+</div>
+</article>
+<!-- Product Card 7 -->
+<article class="group">
+<div class="relative aspect-[4/5] rounded-xxl overflow-hidden bg-surface-container-low mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Artisan ground egusi seeds (melon seeds) in a stone mortar, fine texture, neutral earthy tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA91OF64aF_FORr3W4AFLpPg3-Kj8mDvL0amYHuxYbveKX0CuPxZy-DnPQwHvG9ZG4-QcQu0h8qvWj4u7MLwQUjwUHsmxD7ydATx-3ahxryY3plhS7xaAUM8-XBTo13GerT5w6maBXIHRr-B_9rnlllt3Vje-PrvYreYePpVxK6GxfxA95hznaKaqVuV8UFfyh23cZtuk1zXC9kS8tO-OB5mQnwgi4evxK-NKSu2fxHhh9X5b69vL15Cg0Ec44QJeM7cbF0O0XFwCK0"/>
+<button class="absolute bottom-4 right-4 bg-white/90 backdrop-blur p-3 rounded-full shadow-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+<span class="material-symbols-outlined text-primary">favorite</span>
+</button>
+</div>
+<div class="px-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-on-background group-hover:text-primary transition-colors">Ground Egusi Seeds</h3>
+<span class="font-headline font-bold text-tertiary">$14.00</span>
+</div>
+<p class="text-xs text-on-surface-variant mb-4">Essential for Nigerian Soups</p>
+<button class="w-full bg-primary text-on-primary py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-colors shadow-sm active:scale-95">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+                            Add to Cart
+                        </button>
+</div>
+</article>
+<!-- Product Card 8 -->
+<article class="group">
+<div class="relative aspect-[4/5] rounded-xxl overflow-hidden bg-surface-container-low mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A bundle of fresh cassava roots on a table, detailed skin texture with morning light highlighting the organic shapes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ1y-gif3RY6mJoFX9cl21ppYNYShdIgHlsVkQ4FdvwWQiNQsIUsJNq69C0NgypZpB8c0W_uep1r673U7IPWFvIDsywurkTvPbP45QaoFn_is3rR2fGrpYWuC71IbbmpussQgY08q5du0NlvszHZlEYz0t8lMvaKJ7C3Li02XwI61fvbqn8JUOh2xx7ivvMQ636W63EemhfROq3e4HWsRyFsWpYR1HsYVthZhyrKtRVfAh6I5LtCkndU0aQg_n9gdhU8O75bboK8Dp"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-black uppercase tracking-tighter px-2 py-1 rounded">Organic</span>
+</div>
+<button class="absolute bottom-4 right-4 bg-white/90 backdrop-blur p-3 rounded-full shadow-lg opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+<span class="material-symbols-outlined text-primary">favorite</span>
+</button>
+</div>
+<div class="px-1">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-bold text-on-background group-hover:text-primary transition-colors">Fresh Yuca (Cassava)</h3>
+<span class="font-headline font-bold text-tertiary">$3.50</span>
+</div>
+<p class="text-xs text-on-surface-variant mb-4">Whole root vegetables, per lb</p>
+<button class="w-full bg-primary text-on-primary py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary-container transition-colors shadow-sm active:scale-95">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+                            Add to Cart
+                        </button>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<footer class="mt-16 flex justify-center gap-4">
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full bg-primary text-on-primary font-bold shadow-md shadow-primary/20">1</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container transition-colors font-bold">2</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container transition-colors font-bold">3</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</footer>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#ffeade] dark:bg-[#1a1411] border-t border-[#dfc0b7]/20 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 max-w-screen-2xl mx-auto">
+<div class="space-y-6">
+<h2 class="font-epilogue font-black text-2xl text-[#28180d] dark:text-[#fff1ea]">The Modern Hearth</h2>
+<p class="font-manrope text-sm text-[#28180d]/60 dark:text-[#fff1ea]/60 leading-relaxed">
+                    Connecting the diaspora through the flavors of home. We source directly from smallholder farms across Africa and the Caribbean.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer">social_leaderboard</span>
+<span class="material-symbols-outlined text-primary cursor-pointer">public</span>
+</div>
+</div>
+<div class="space-y-6">
+<h3 class="font-epilogue font-bold text-lg text-on-background">Explore Market</h3>
+<nav class="flex flex-col gap-3 font-manrope text-sm">
+<a class="text-[#28180d]/60 dark:text-[#fff1ea]/60 hover:text-[#39614e] underline decoration-2 underline-offset-4 transition-all" href="#">Heritage Grains</a>
+<a class="text-[#28180d]/60 dark:text-[#fff1ea]/60 hover:text-[#39614e] underline decoration-2 underline-offset-4 transition-all" href="#">Caribbean Spices</a>
+<a class="text-[#28180d]/60 dark:text-[#fff1ea]/60 hover:text-[#39614e] underline decoration-2 underline-offset-4 transition-all" href="#">Wholesale</a>
+<a class="text-[#28180d]/60 dark:text-[#fff1ea]/60 hover:text-[#39614e] underline decoration-2 underline-offset-4 transition-all" href="#">New Arrivals</a>
+</nav>
+</div>
+<div class="space-y-6">
+<h3 class="font-epilogue font-bold text-lg text-on-background">Our Values</h3>
+<nav class="flex flex-col gap-3 font-manrope text-sm">
+<a class="text-[#28180d]/60 dark:text-[#fff1ea]/60 hover:text-[#39614e] underline decoration-2 underline-offset-4 transition-all" href="#">Sustainability</a>
+<a class="text-[#28180d]/60 dark:text-[#fff1ea]/60 hover:text-[#39614e] underline decoration-2 underline-offset-4 transition-all" href="#">Cultural Origins</a>
+<a class="text-[#28180d]/60 dark:text-[#fff1ea]/60 hover:text-[#39614e] underline decoration-2 underline-offset-4 transition-all" href="#">Direct Trade</a>
+<a class="text-[#28180d]/60 dark:text-[#fff1ea]/60 hover:text-[#39614e] underline decoration-2 underline-offset-4 transition-all" href="#">Sitemap</a>
+</nav>
+</div>
+<div class="space-y-6">
+<h3 class="font-epilogue font-bold text-lg text-on-background">Legal &amp; Support</h3>
+<nav class="flex flex-col gap-3 font-manrope text-sm">
+<a class="text-[#28180d]/60 dark:text-[#fff1ea]/60 hover:text-[#39614e] underline decoration-2 underline-offset-4 transition-all" href="#">Shipping</a>
+<a class="text-[#28180d]/60 dark:text-[#fff1ea]/60 hover:text-[#39614e] underline decoration-2 underline-offset-4 transition-all" href="#">Privacy Policy</a>
+<a class="text-[#28180d]/60 dark:text-[#fff1ea]/60 hover:text-[#39614e] underline decoration-2 underline-offset-4 transition-all" href="#">Terms of Service</a>
+<a class="text-[#28180d]/60 dark:text-[#fff1ea]/60 hover:text-[#39614e] underline decoration-2 underline-offset-4 transition-all" href="#">Contact Support</a>
+</nav>
+</div>
+</div>
+<div class="max-w-screen-2xl mx-auto px-12 py-8 border-t border-on-background/5 text-center">
+<p class="font-manrope text-sm text-[#28180d]/60 dark:text-[#fff1ea]/60">© 2024 The Modern Hearth. Curated Heritage Grains &amp; Spices.</p>
+</div>
+</footer>
+</body></html>
