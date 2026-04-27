@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | The Modern Hearth</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: "#39614e", secondary: "#7d5800", tertiary: "#973d00", background: "#fff8f5", surface: "#ffeade" },
+                    fontFamily: { headline: ["Epilogue"], body: ["Manrope"] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-[#28180d] font-body">
+
+    <nav class="flex justify-between items-center px-12 py-6 max-w-screen-2xl mx-auto border-b border-[#dfc0b7]/30">
+        <a href="#" class="text-2xl font-bold font-headline">The Modern Hearth</a>
+        <div class="hidden md:flex gap-8 font-bold text-sm">
+            <a href="shop_code.html" class="hover:text-primary transition-colors">Market</a>
+            <a href="about.html" class="hover:text-primary transition-colors">About</a>
+            <a href="faq.html" class="hover:text-primary transition-colors">FAQ</a>
+            <a href="#" class="text-primary border-b-2 border-primary pb-1">Contact</a>
+        </div>
+    </nav>
+
+    <main class="max-w-screen-2xl mx-auto px-12 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20 items-center">
+            <div>
+                <h1 class="text-6xl font-headline font-black leading-tight mb-6">Get in <span class="text-primary italic">Touch</span></h1>
+                <p class="text-lg leading-relaxed">Whether you're looking for a specific heritage grain or interested in wholesale partnerships, our hearth is always open for conversation.</p>
+            </div>
+            <div class="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPCJE5xcZs9Erqdz9dWdeqWouommwn5acEthOky2R1MZncPKNqQZvS3fR8xzXmYiX5DrdG54T1aogPJotEVjJeGpQCmDNWerkd0YI2N0ecRzs3WBmIgB90xfP3o1Qge-MoMOR2Tw7sMPlSHyujFWzS39kVm24iEwQkD5Jb8SNyNjKjvvqloK15j_cec6RhUC1A5PjtJKIyno-IX82qh5ajKEaZ7_NIaGPstfXSi__ay_MreeqHRJXaYCQ1Gym7xLzpImbX9Ej0azy2" alt="Spice Market" class="w-full h-full object-cover">
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-24">
+            <div class="lg:col-span-8 bg-white rounded-[2rem] p-12 shadow-sm border border-[#dfc0b7]/30">
+                <h2 class="text-3xl font-headline font-black mb-8">Send a Message</h2>
+                <form class="space-y-6">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <label class="block font-bold text-sm mb-2">Full Name</label>
+                            <input type="text" placeholder="Kofi Mensah" class="w-full bg-[#fff1ea] border-none rounded-xl px-4 py-4">
+                        </div>
+                        <div>
+                            <label class="block font-bold text-sm mb-2">Email Address</label>
+                            <input type="email" placeholder="kofi@example.com" class="w-full bg-[#fff1ea] border-none rounded-xl px-4 py-4">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block font-bold text-sm mb-3">Inquiry Type</label>
+                        <div class="flex flex-wrap gap-3">
+                            <button type="button" class="bg-[#ffba27] text-[#28180d] font-bold text-xs px-4 py-2 rounded-full">General</button>
+                            <button type="button" class="bg-surface text-[#28180d] font-bold text-xs px-4 py-2 rounded-full">Wholesale</button>
+                            <button type="button" class="bg-surface text-[#28180d] font-bold text-xs px-4 py-2 rounded-full">Heritage Inquiry</button>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block font-bold text-sm mb-2">Your Message</label>
+                        <textarea rows="5" placeholder="Tell us what's on your mind..." class="w-full bg-[#fff1ea] border-none rounded-xl px-4 py-4 resize-none"></textarea>
+                    </div>
+                    <button type="button" class="bg-primary text-white font-headline font-bold py-4 px-8 rounded-xl w-full lg:w-auto">Send Message</button>
+                </form>
+            </div>
+
+            <div class="lg:col-span-4 space-y-6">
+                <div class="bg-[#c1ecd4]/50 p-8 rounded-3xl">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-symbols-outlined text-primary text-3xl">chat</span>
+                        <h3 class="font-headline font-bold text-xl text-primary">WhatsApp</h3>
+                    </div>
+                    <p class="text-sm text-primary mb-4">Real-time assistance for your orders.</p>
+                    <a href="#" class="font-headline font-bold text-primary">Chat with us →</a>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border border-[#dfc0b7]/30">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-symbols-outlined text-3xl">mail</span>
+                        <h3 class="font-headline font-bold text-xl">Email Us</h3>
+                    </div>
+                    <p class="text-sm mb-4">We respond within 4 business hours.</p>
+                    <a href="#" class="font-headline font-bold">support@modernhearth.com →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <h2 class="text-4xl font-headline font-black mb-12">Our Roots</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div>
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi0zarItdm3xEpWvHIKZwla1jz5uUgqSJ5Tz60ehbLOA4nbG4AZY-iFe2D9q4N7qRQeLhtk37sV7DbpHmKog5tz8RS8wmdqJfRFaH9LFsynUbvudnEwmKLdgPaekO99ouegq3Eoin8VYt_l7QZ2wUGbATxphklqbe_PIm1CL0IGdRTnXUfAlRBAGReZ-P0IpANu3QcNBj47d3bezY1ga_T1p-FlmL_ZEuGzv9p2W3lbPa7PzIGKUmI_ogBu7Wjbs6_x0f-NuQlmQ8W" alt="Kingston" class="w-48 h-48 rounded-full object-cover mx-auto mb-4 border-4 border-white shadow-lg">
+                    <h3 class="font-headline font-bold text-xl">Caribbean Hub</h3>
+                    <p class="text-sm text-[#28180d]/60">Kingston, Jamaica</p>
+                </div>
+                <div>
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDETzrEf26nuz131BB89O-WZOZQj5GVoHC9VUZ7MJ7j4AvG3qvX3pntuDiigcQrb5mNRuzgJaIb9_3fO0lVS_yU1S9jHWLAndKoHraOLn_u2y14ZXc82ZtMzpWTiKhyRWm_xbDmHx8ECbaoToSTSKHXO1UXzHwmktv6mnQ0dWC5tTkY2nYpBC-d9GtjbWQCb1P1HnrRKjRhR4PdQud-S-qZqgxHJM2yr0w7qr4GENrI_v3aESz--7Xc9iEIH39yv8svWXN2P2UJ-UtK" alt="Accra" class="w-48 h-48 rounded-full object-cover mx-auto mb-4 border-4 border-white shadow-lg">
+                    <h3 class="font-headline font-bold text-xl">Global HQ</h3>
+                    <p class="text-sm text-[#28180d]/60">Accra, Ghana</p>
+                </div>
+                <div>
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPP2vl8dTn9OYQTpWKdNLZFXUXgc2ztxZf0NaBAIDn0TkSbnVRmV1MON84u6los-eUAMdZcWut1zkbpEaMoY013nPoNFF_RvLX-DbVs_qiYF66LlRySu1qGtAg1j-gLx2yCWAlouU1_1KGgrna_cnC4QXGu0oVxGsUQxkyIL29AkJe7DN_BxE80fgTe0ZaHeoQJRk1Cohv6gt4kJMZpWqKzVgLjBb9_TWgeYVdfrkLLrhj3LDmwPuzbZU5aGx3RQzCBrfT0qlEqO0z" alt="London" class="w-48 h-48 rounded-full object-cover mx-auto mb-4 border-4 border-white shadow-lg">
+                    <h3 class="font-headline font-bold text-xl">Distribution</h3>
+                    <p class="text-sm text-[#28180d]/60">London, UK</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
