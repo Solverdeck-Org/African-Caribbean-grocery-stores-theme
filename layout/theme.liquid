@@ -297,6 +297,38 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries" defer></script>
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: "#39614e",
+          secondary: "#7d5800",
+          tertiary: "#973d00",
+          background: "#fff8f5",
+          surface: "#ffeade",
+          "surface-container-low": "#fff1ea",
+          "surface-container-highest": "#fbddca",
+          "on-background": "#28180d",
+          "on-surface-variant": "#58423b"
+        },
+        fontFamily: {
+          headline: ["Epilogue"],
+          body: ["Manrope"]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  body { background-color: #fff8f5; color: #28180d; font-family: 'Manrope', sans-serif; }
+</style>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
