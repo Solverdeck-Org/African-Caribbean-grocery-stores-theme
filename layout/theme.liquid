@@ -298,41 +298,46 @@
       }
     </script>
 
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries" defer></script>
+    <style>
+      /* Ensure Shopify's native font settings are mapped to CSS variables */
+      {{ settings.type_header_font | font_face: font_display: 'swap' }}
+      {{ settings.type_body_font | font_face: font_display: 'swap' }}
+      
+      :root {
+        --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
+        --font-body-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+      }
+
+      .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+      body { background-color: #fff8f5 !important; color: #28180d !important; font-family: var(--font-body-family) !important; }
+    </style>
 
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              primary: '#39614e',
-              secondary: '#7d5800',
-              tertiary: '#973d00',
-              background: '#fff8f5',
-              surface: '#ffeade',
-              'surface-container-low': '#fff1ea',
-              'surface-container-highest': '#fbddca',
-              'on-background': '#28180d',
-              'on-surface-variant': '#58423b',
+              primary: "#39614e",
+              secondary: "#7d5800",
+              tertiary: "#973d00",
+              background: "#fff8f5",
+              surface: "#ffeade",
+              "surface-container-low": "#fff1ea",
+              "surface-container-highest": "#fbddca",
+              "on-background": "#28180d",
+              "on-surface-variant": "#58423b"
             },
             fontFamily: {
-              headline: ['Epilogue'],
-              body: ['Manrope'],
-            },
-          },
-        },
-      };
+              /* Map Tailwind directly to Shopify's dynamic CSS variables */
+              headline: ["var(--font-heading-family)", "serif"],
+              body: ["var(--font-body-family)", "sans-serif"]
+            }
+          }
+        }
+      }
     </script>
-    <style>
-      .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-      }
-      body {
-        background-color: #fff8f5;
-        color: #28180d;
-        font-family: 'Manrope', sans-serif;
-      }
-    </style>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
